@@ -5,12 +5,16 @@
 <form asp-controller="Conversion" asp-action="DoConversion" method="POST">
 <!--THis is borrowed from https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_submit-->
 
-Value to Convert<br>
+Please Enter a Value to Convert<br>
   <input type="text" asp-for="@Model.ValueToConvert">
   <br>
-Conversion Type<br>
-  <input type="text" asp-for="@Model.ConversionType">
-  <br><br>
+  
+  <input type="checkbox" value="meters-to-feet" asp-for="@Model.ConversionType">meters-to-feet<br>
+  <input type="checkbox" value="feet-to-meters" asp-for="@Model.ConversionType">feet-to-meters<br>
+   <input type="checkbox" value="ounces-to-pounds" asp-for="@Model.ConversionType">ounces-to-pounds<br>
+
+
+
   <input type="submit" value="Submit">
 
 </form>

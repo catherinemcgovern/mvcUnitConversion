@@ -27,12 +27,28 @@ namespace UConverter.Controllers
        public IActionResult DoConversion(ConverterViewModel model)
         {
        // model.ConvertedValue = model.ValueToConvert * model.ValueToConvert;
+      if (model.ConversionType == "meters-to-feet")
+      {
             model.ConvertedValue = model.ValueToConvert * 3.28084m;
             return View(model);
+      }
+        
+       else if (model.ConversionType == "feet-to-meters")
+        {
+            model.ConvertedValue = model.ValueToConvert * 0.3048m;
+            return View(model);
+            
         }
 
-
-
+        else 
+        {
+            Console.WriteLine("Invalid Option");
+            return View(model);
+            
+        }
+        }
+    }
 
     }
-}
+
+
