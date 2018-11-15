@@ -38,7 +38,38 @@ namespace UConverter.Controllers
             model.ConvertedValue = model.ValueToConvert * 0.3048m;
             return View(model);
             
+        } 
+
+       else if (model.ConversionType == "pounds-to-ounces")
+        {
+            model.ConvertedValue = model.ValueToConvert * 16m;
+            return View(model);
+            
         }
+
+        
+       else if (model.ConversionType == "ounces-to-pounds")
+        {
+            model.ConvertedValue = model.ValueToConvert * 0.0625m;
+            return View(model);
+            
+        }
+
+//Temp Conversions start here
+              else if (model.ConversionType == "f-to-c")
+        {
+            model.ConvertedValue = (model.ValueToConvert-32) * (5m/9m);
+            return View(model);
+            
+        }
+
+                      else if (model.ConversionType == "c-to-f")
+        {
+            model.ConvertedValue = model.ValueToConvert * (1.8m) + 32;
+            return View(model);
+            
+        }
+
 
         else 
         {

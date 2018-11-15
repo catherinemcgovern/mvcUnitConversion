@@ -5,15 +5,20 @@
 <form asp-controller="Conversion" asp-action="DoConversion" method="POST">
 <!--THis is borrowed from https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_submit-->
 
-Please Enter a Value to Convert<br>
+<BR><BR>Please Enter a Value to Convert<br>
   <input type="text" asp-for="@Model.ValueToConvert">
   <br>
-  
-  <input type="checkbox" value="meters-to-feet" asp-for="@Model.ConversionType">meters-to-feet<br>
-  <input type="checkbox" value="feet-to-meters" asp-for="@Model.ConversionType">feet-to-meters<br>
-   <input type="checkbox" value="ounces-to-pounds" asp-for="@Model.ConversionType">ounces-to-pounds<br>
-
-
+<BR>
+<strong>Please Select a conversion option</strong>
+  <br><br>LENGTH<br>
+  <input type="checkbox" value="meters-to-feet" asp-for="@Model.ConversionType"> meters-to-feet<br>
+  <input type="checkbox" value="feet-to-meters" asp-for="@Model.ConversionType"> feet-to-meters<br>
+  <br>MASS<br>
+   <input type="checkbox" value="ounces-to-pounds" asp-for="@Model.ConversionType"> ounces-to-pounds<br>
+   <input type="checkbox" value="pounds-to-ounces" asp-for="@Model.ConversionType"> pounds-to-ounces<br>
+   <br>TEMPERATURE<BR>
+  <input type="checkbox" value="f-to-c" asp-for="@Model.ConversionType"> Convert Farenheit Temp to Celsius<br>
+    <input type="checkbox" value="c-to-f" asp-for="@Model.ConversionType"> Convert Celsius Temp to Farenheit<br>
 
   <input type="submit" value="Submit">
 
