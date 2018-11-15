@@ -1,0 +1,18 @@
+@model ConverterViewModel 
+
+<!--this is sending values from the controller to view must bind text fields to the model -->
+
+<form asp-controller="Conversion" asp-action="DoConversion" method="POST">
+<!--THis is borrowed from https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_submit-->
+
+Value to Convert<br>
+  <input type="text" asp-for="@Model.ValueToConvert">
+  <br>
+Conversion Type<br>
+  <input type="text" asp-for="@Model.ConversionType">
+  <br><br>
+  <input type="submit" value="Submit">
+
+</form>
+
+<!--View model type-->
